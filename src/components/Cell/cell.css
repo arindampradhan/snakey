@@ -8,6 +8,9 @@
 .snake {
   /* background-color: rgb(222, 149, 59); */
   border-color: transparent;
+  /* add cellMove transition animation to snake cell */
+  transition: all 0.01s ease-out;
+
 
   background:
     radial-gradient(
@@ -52,6 +55,7 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
 
 @keyframes blink {
   from {
