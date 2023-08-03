@@ -1,0 +1,62 @@
+.neon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.neon-text {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 48px;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 20px #281626,
+    0 0 40px #ff00de,
+    0 0 60px #ff00de,
+    0 0 80px #ff00de,
+    0 0 100px #ff00de,
+    0 0 120px #ff00de;
+  animation: neonAnimation 1.5s ease-in-out infinite alternate;
+}
+
+.neon-text.small {
+  font-size: 32px;
+}
+
+.wire {
+  width: 2px;
+  height: 100%;
+  position: absolute;
+}
+
+.wire:first-child {
+  left: 25%;
+}
+
+.wire:last-child {
+  right: 25%;
+}
+
+@keyframes neonAnimation {
+  0% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 20px #ff00de,
+      0 0 40px #ff00de,
+      0 0 60px #ff00de,
+      0 0 80px #ff00de,
+      0 0 100px #ff00de,
+      0 0 120px #ff00de;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #fff,
+      0 0 30px #ff00de,
+      0 0 50px #ff00de,
+      0 0 70px #ff00de,
+      0 0 90px #ff00de,
+      0 0 110px #ff00de,
+      0 0 130px #ff00de;
+  }
+}

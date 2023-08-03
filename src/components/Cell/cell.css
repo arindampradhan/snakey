@@ -1,0 +1,68 @@
+.cell {
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 0.5px solid #999fa2;
+  box-sizing: border-box;
+}
+
+.snake {
+  /* background-color: rgb(222, 149, 59); */
+  border-color: transparent;
+
+  background:
+    radial-gradient(
+        farthest-side at -33.33% 50%,
+        #0000 52%,
+        #28312e 54% 57%,
+        #0000 59%
+      )
+      0 calc(56px / 2),
+    radial-gradient(
+        farthest-side at 50% 133.33%,
+        #0000 52%,
+        #28312e 54% 57%,
+        #0000 59%
+      )
+      calc(56px / 2) 0,
+    radial-gradient(
+      farthest-side at 133.33% 50%,
+      #0000 52%,
+      #28312e 54% 57%,
+      #0000 59%
+    ),
+    radial-gradient(
+      farthest-side at 50% -33.33%,
+      #0000 52%,
+      #28312e 54% 57%,
+      #0000 59%
+    ),
+    #b2b2aa;
+  background-size:
+    calc(56px / 4.667) 56px,
+    56px calc(56px / 4.667);
+}
+
+.food {
+  background-color: rgb(170, 23, 23);
+
+  animation-delay: 0.125s;
+  /* background: white; */
+  animation-name: blink;
+  animation-duration: 1.125s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  from {
+    background: rgba(255, 255, 255, 0.703);
+  }
+
+  50% {
+    background: rgb(170, 23, 23);
+  }
+
+  to {
+    background: rgba(255, 255, 255, 0.703);
+  }
+}
